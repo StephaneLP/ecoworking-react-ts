@@ -1,0 +1,44 @@
+/*************************************************/
+/* FONTS
+/*************************************************/
+
+@font-face {
+    font-family: "Poppins-Thin";
+    src: url(../../fonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url(../../fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Poppins-Light";
+    src: url(../../fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../../fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(../../fonts/Roboto/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../../fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "Jua";
+    src: url(../../fonts/Jua/Jua-Regular.ttf);
+}
