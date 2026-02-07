@@ -4,7 +4,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 99;
-    background-color: var(--color-bg-header_bandeau-secondary);
+    background-color: var(--color-bg-bandeau-secondary);
     box-shadow: 0 2px 10px var(--color-shadow-primary);
 }
 
@@ -13,7 +13,7 @@ header {
 /*************************************************/
 
 .header_bandeau_left {
-    background-color: var(--color-bg-header_bandeau-primary);
+    background-color: var(--color-bg-bandeau-primary);
 }
 
 /*************************************************/
@@ -34,23 +34,23 @@ header {
     img {
         height: 6rem;
         padding: 1rem 0;
-        background-color: var(--color-bg-header_bandeau-primary);
+        background-color: var(--color-bg-bandeau-primary);
     }    
 
     .header_bandeau_logo-separator {
-        border-left: 2rem solid var(--color-bg-header_bandeau-primary);
+        border-left: 2rem solid var(--color-bg-bandeau-primary);
         border-bottom:  6rem solid transparent;
     }
 
     .header_bandeau_logo-title {
         font-size: 2rem;
         font-family: var(--font-family-title);
-        color: var(--color-font-header_bandeau-title-primary);
+        color: var(--color-font-bandeau-title-primary);
         transition: color var(--transition-primary);
 
         span {
             transition: color var(--transition-primary);
-            color: var(--color-font-header_bandeau-title-secondary);
+            color: var(--color-font-bandeau-title-secondary);
         }      
     }
 
