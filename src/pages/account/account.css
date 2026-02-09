@@ -1,0 +1,109 @@
+/*************************************************/
+/* CONNEXION
+/*************************************************/
+
+main {
+    position: relative;
+    background-color: var(--color-bg-light-secondary);
+}
+
+.connect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .connect_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+
+        .connect_grid-signin,  .connect_grid-signup {
+            padding: 3rem 6rem 4rem;
+            box-shadow: 5px 5px 10px 0 var(--color-shadow-secondary);
+            border-radius: 10px;
+            background-color: var(--color-bg-light-primary);
+
+            .button {
+                margin: 2rem auto 0;
+                width: 50%;
+            }
+        }
+
+        /* .connect_grid-signin {
+            
+        } */
+
+        .connect_grid-signup {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-bg-dark-primary);
+            color: var(--color-font-light);
+
+            h4 {
+                color: var(--color-font-light);
+            }
+
+            >div {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 8rem;
+                    margin-top: 2rem;
+                }
+            }
+
+            .button {
+                border: solid 0px var(--color-input-border);
+
+                &:hover {
+                    border: solid 1px var(--color-hover-primary);
+                }
+            }
+        }
+    }
+}
+
+/* FORMULAIRE */
+
+.connect_form {
+    margin-top: 2rem;
+    
+    >div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;        
+    }
+
+     label {
+        margin-bottom: 0.25rem;
+    }
+        
+    input[type="email"], input[type="password"] {
+        height: 2rem;
+        border: solid 1px var(--color-bg-dark-primary);
+        border-radius: 5px;
+        padding: 0 0.5rem;
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-input-border);
+            box-shadow: 0 0 10px 0px var(--color-input-shadow);
+        }        
+    }
+
+    a {
+        display: block;
+        font-size: 0.9rem;
+
+        span {
+            margin-right: 0.25rem;
+            font-family: "Poppins-Medium", Verdana, sans-serif;
+        }
+    }
+}

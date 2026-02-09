@@ -1,6 +1,6 @@
 /* BANDEAU : MENU */
 
-.bandeau_menu {
+.header_menu {
     display: flex;
     gap: 2.5rem;
     height: 100%;
@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
 
-        .bandeau_menu-link, .bandeau_menu-libelle, .bandeau_menu-libelle::after {
+        .header_menu-link, .header_menu-libelle, .header_menu-libelle::after {
             font-size: 1.2rem;
             font-weight: 500;
             color: var(--color-font-menu-primary);
@@ -18,7 +18,7 @@
             transition: color var(--transition-primary), transform var(--transition-primary);
         }
 
-        .bandeau_menu-libelle {
+        .header_menu-libelle {
             display: flex;
             align-items: center;
             cursor: default;
@@ -33,11 +33,11 @@
             }
         }
 
-        .bandeau_menu-link:hover {
+        .header_menu-link:hover {
             color: var(--color-hover-primary);
         }
 
-        .bandeau_menu-link:focus-visible {
+        .header_menu-link:focus-visible {
             outline: 2px solid var(--color-hover-primary);
         }
 
@@ -48,13 +48,13 @@
         }
     }
 
-    >li:has(.bandeau_menu-libelle) {
+    >li:has(.header_menu-libelle) {
         &:hover, &:has(a:focus) {
-            /* .bandeau_menu-libelle {
+            /* .header_menu-libelle {
                 color: var(--color-hover-primary);
             } */
 
-            .bandeau_menu-libelle::after {
+            .header_menu-libelle::after {
                 transform: rotate(90deg);
                 /* border-left-color: var(--color-hover-primary); */
             }
@@ -64,7 +64,7 @@
 
 /* BANDEAU : MENU DÉROULANT */
 
-.bandeau_menu-dropdown {
+.header_menu-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -94,7 +94,7 @@
 
 /* BANDEAU : SOUS-MENU */
 
-.bandeau_submenu {
+.header_submenu {
     list-style-type: none;
     padding: 1rem 0;
     line-height: 2rem;
@@ -117,9 +117,9 @@
 
 /* ANIMATION DU MENU DÉROULANT */
 
-.bandeau_menu {
+.header_menu {
     >li:hover, >li:has(a:focus) {
-        .bandeau_menu-dropdown {
+        .header_menu-dropdown {
             height: calc-size(auto, size);
             padding: 1rem 0;
         }

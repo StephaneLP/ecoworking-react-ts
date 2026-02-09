@@ -1,16 +1,23 @@
 import './menu.css'
+import { Link } from 'react-router-dom'
 
-export default function Menu() {
+export default function Menu({...props}: {[key: string]: boolean}) {
+    const containMenu = props.containMenu
+
     return (
         <nav>
-            <ul className="bandeau_menu">
+            <ul className="header_menu">
+            { containMenu ? 
+            (
+                <>
+
                 <li>
-                    <span className="bandeau_menu-libelle">Espaces d'écoworking</span>
-                    <div className="bandeau_menu-dropdown">
+                    <span className="header_menu-libelle">Espaces d'écoworking</span>
+                    <div className="header_menu-dropdown">
                         <div className="container">
                             <div>
                                 <span>Laval</span>
-                                <ul className="bandeau_submenu">
+                                <ul className="header_submenu">
                                     <li><a href="/pages/ecoworkings/green-place.html">Green Place</a></li>
                                     <li><a href="#0">Assolidaire</a></li>
                                     <li><a href="#0">Le Comptoir du Maine</a></li>
@@ -18,14 +25,14 @@ export default function Menu() {
                             </div>
                             <div>
                                 <span>Château-Gontier</span>
-                                <ul className="bandeau_submenu">
+                                <ul className="header_submenu">
                                     <li><a href="#0">eCafé</a></li>
                                     <li><a href="#0">La Harelle</a></li>
                                 </ul>                                     
                             </div>
                             <div>
                                 <span>Mayenne</span>
-                                <ul className="bandeau_submenu">
+                                <ul className="header_submenu">
                                     <li><a href="#0">La Bulle Verte</a></li>
                                     <li><a href="#0">La Mayennaise</a></li>
                                 </ul>                                     
@@ -34,8 +41,19 @@ export default function Menu() {
                     </div>
                 </li>
                 <li>
-                    <a className="button" href="/pages/account/connect.html">Se connecter</a>
+                    <Link className="button" to="/signin">Se connecter</Link>
                 </li>
+                </>
+            )
+            :
+            (
+                <li>
+                    <Link className="button" to="/">
+                        <span className="menu-back">&lt;</span> Retour
+                    </Link>
+                </li>
+            )
+            }
             </ul>
         </nav>  
     )

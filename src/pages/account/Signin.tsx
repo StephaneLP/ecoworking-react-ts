@@ -1,18 +1,14 @@
 import Header from '../../layout/header/Header.tsx'
 import Footer from '../../layout/footer/Footer.tsx'
 
-import { useEffect } from "react"
-
-export default function Home() {
-    useEffect(() => window.scrollTo(0, 0), [])
+export default function Signin() {
 
     return (
         <>
-        <Header containMenu={true} />
+        <Header containMenu={false} />
         <main>
-HOME
+Signin
         </main>
-        <Footer />
         </>
     )
 }

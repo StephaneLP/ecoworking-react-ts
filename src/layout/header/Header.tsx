@@ -3,7 +3,9 @@ import imgLogo from '../../assets/img/logos/logo.png'
 
 import Menu from '../menu/Menu.tsx'
 
-export default function Header() {
+export default function Header({...props}:  {[key: string]: boolean}) {
+    const containMenu = props.containMenu
+
     return (
         <header>
             <div className="header_bandeau_left"></div>
@@ -15,7 +17,7 @@ export default function Header() {
                         <span>É</span>co<span>W</span>orking
                     </div>
                 </a>
-                <Menu />
+                <Menu containMenu={ containMenu } />
             </div>
         </header>        
     )
