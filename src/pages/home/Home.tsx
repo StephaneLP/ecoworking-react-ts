@@ -1,14 +1,19 @@
 import Header from '../../layout/header/Header.tsx'
 import Footer from '../../layout/footer/Footer.tsx'
+import { HeaderProps } from '../../definitions/props.ts'
+import { ReactElement, useEffect } from "react"
 
-import { useEffect } from "react"
+const props: HeaderProps = {
+    displayMenu: true,
+    displayBackBtn: false
+}
 
-export default function Home() {
+export default function Home(): ReactElement {
     useEffect(() => window.scrollTo(0, 0), [])
 
     return (
         <>
-        <Header containMenu={true} />
+        <Header {...props} />
         <main>
 HOME
         </main>

@@ -1,16 +1,17 @@
 import './menu.css'
 import { Link } from 'react-router-dom'
+import { HeaderProps } from '../../definitions/props.ts'
+import { ReactElement } from 'react'
 
-export default function Menu({...props}: {[key: string]: boolean}) {
-    const containMenu = props.containMenu
+export default function Menu(props: HeaderProps): ReactElement {
+    const displayMenu = props.displayMenu
+    const displayBackBtn = props.displayBackBtn
 
     return (
         <nav>
             <ul className="header_menu">
-            { containMenu ? 
-            (
+            { displayMenu && (
                 <>
-
                 <li>
                     <span className="header_menu-libelle">Espaces d'écoworking</span>
                     <div className="header_menu-dropdown">
@@ -44,16 +45,15 @@ export default function Menu({...props}: {[key: string]: boolean}) {
                     <Link className="button" to="/signin">Se connecter</Link>
                 </li>
                 </>
-            )
-            :
-            (
+            )}
+
+            { displayBackBtn && (
                 <li>
                     <Link className="button" to="/">
                         <span className="menu-back">&lt;</span> Retour
                     </Link>
                 </li>
-            )
-            }
+            )}
             </ul>
         </nav>  
     )

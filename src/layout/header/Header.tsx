@@ -1,11 +1,11 @@
 import './header.css'
 import imgLogo from '../../assets/img/logos/logo.png'
+import { HeaderProps } from '../../definitions/props.ts'
+import { ReactElement } from 'react'
 
 import Menu from '../menu/Menu.tsx'
 
-export default function Header({...props}:  {[key: string]: boolean}) {
-    const containMenu = props.containMenu
-
+export default function Header(props: HeaderProps): ReactElement {
     return (
         <header>
             <div className="header_bandeau_left"></div>
@@ -17,7 +17,7 @@ export default function Header({...props}:  {[key: string]: boolean}) {
                         <span>É</span>co<span>W</span>orking
                     </div>
                 </a>
-                <Menu containMenu={ containMenu } />
+                <Menu {...props} />
             </div>
         </header>        
     )
