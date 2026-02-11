@@ -1,0 +1,31 @@
+.coworking {
+    h4 {
+        text-align: left;
+    }
+
+    .alternative-bg-color {
+        margin: 4rem 0;
+        padding: 4rem 0;
+        background-color: var(--color-bg-light-secondary);
+    }
+
+    .etoiles {
+        display: flex;
+        justify-content: center;
+        gap: 0.4rem;
+
+        div {
+            font-family: var(--font-family-etoile);
+            color: var(--color-font-medium);
+            font-size: 1.8rem;
+
+            &::before {
+                content: "\002605";
+            }
+        }
+
+        .etoile-active {
+            color: var(--color-bg-note);
+        }
+    }
+}

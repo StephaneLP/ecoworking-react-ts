@@ -1,24 +1,24 @@
 footer {
     background-color: var(--color-bg-dark-tertiary);
-}
 
-/*************************************************/
-/* FOOTER : BANNER
-/*************************************************/
+    /*************************************************/
+    /* FOOTER : BANNER
+    /*************************************************/
 
-.footer_banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2.5rem;
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
 
-    img {
-        width: 4rem;
-        margin-bottom: 1rem;
-    }
+        img {
+            width: 4rem;
+            margin-bottom: 1rem;
+        }
 
-    span {
-        color: var(--color-font-light)
+        span {
+            color: var(--color-font-light)
+        }
     }
 }

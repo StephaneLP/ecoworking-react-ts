@@ -13,29 +13,29 @@ export default function Menu(props: HeaderProps): ReactElement {
             { displayMenu && (
                 <>
                 <li>
-                    <span className="header_menu-libelle">Espaces d'écoworking</span>
-                    <div className="header_menu-dropdown">
+                    <span className="menu-libelle">Espaces d'écoworking</span>
+                    <div className="menu-dropdown">
                         <div className="container">
                             <div>
                                 <span>Laval</span>
-                                <ul className="header_submenu">
-                                    <li><a href="/pages/ecoworkings/green-place.html">Green Place</a></li>
-                                    <li><a href="#0">Assolidaire</a></li>
-                                    <li><a href="#0">Le Comptoir du Maine</a></li>
+                                <ul className="submenu">
+                                    <li><Link to="/coworking">Green Place</Link></li>
+                                    <li><Link to="/coworking">Assolidaire</Link></li>
+                                    <li><Link to="/coworking">Le Comptoir du Maine</Link></li>
                                 </ul>                                     
                             </div>
                             <div>
                                 <span>Château-Gontier</span>
-                                <ul className="header_submenu">
-                                    <li><a href="#0">eCafé</a></li>
-                                    <li><a href="#0">La Harelle</a></li>
+                                <ul className="submenu">
+                                    <li><Link to="/coworking">eCafé</Link></li>
+                                    <li><Link to="/coworking">La Harelle</Link></li>
                                 </ul>                                     
                             </div>
                             <div>
                                 <span>Mayenne</span>
-                                <ul className="header_submenu">
-                                    <li><a href="#0">La Bulle Verte</a></li>
-                                    <li><a href="#0">La Mayennaise</a></li>
+                                <ul className="submenu">
+                                    <li><Link to="/coworking">La Bulle Verte</Link></li>
+                                    <li><Link to="/coworking">La Mayennaise</Link></li>
                                 </ul>                                     
                             </div>
                         </div>

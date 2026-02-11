@@ -6,7 +6,7 @@ import { ReactElement } from 'react'
 
 export default function HomePresentation(): ReactElement {
     return (
-        <section className="presentation container">
+        <section className="home-presentation container">
             <h1>ÉcoWorking en Mayenne</h1>
             <p>
                 Bienvenue sur le site dédié aux espaces de coworking situés dans le département de la Mayenne et respectueux de l'environnement

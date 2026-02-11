@@ -13,13 +13,13 @@ export default function Signin(): ReactElement {
     return (
         <>
         <Header {...props} />
-        <main>
-            <section className="connect container">
-                {/* <h1>Se Connecter</h1> */}
-                <div className="connect_grid">
-                    <div className="connect_grid-signin">
+        <main className='account'>
+            <section className="signin container">
+                {/* <h1>Se connecter</h1> */}
+                <div className="grid">
+                    <div className="grid-signin">
                         <h4>Identifiez-vous</h4>
-                        <form className="connect_form" method="get" action="">
+                        <form className="account_form" method="get" action="">
                             <div>
                                 <label>Email</label>
                                 <input type="email" tabIndex={1} placeholder="" maxLength={50} autoFocus />
@@ -32,7 +32,7 @@ export default function Signin(): ReactElement {
                             <input className="button" type="submit" value="Valider" />
                         </form>
                     </div>
-                    <div className="connect_grid-signup">
+                    <div className="grid-signup">
                         <h4>Vous souhaitez devenir Écoworker ?</h4>
                         <div>
                             <img src={imgSignUp} alt='inscription' />

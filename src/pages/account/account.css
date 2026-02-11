@@ -1,25 +1,25 @@
-/*************************************************/
-/* CONNEXION
-/*************************************************/
-
-main {
+.account {
     position: relative;
     background-color: var(--color-bg-light-secondary);
 }
 
-.connect {
+/*************************************************/
+/* CONNEXION
+/*************************************************/
+
+.signin {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    .connect_grid {
+    .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 1fr;
         gap: 1rem;
 
-        .connect_grid-signin,  .connect_grid-signup {
+        .grid-signin,  .grid-signup {
             padding: 3rem 6rem 4rem;
             box-shadow: 5px 5px 10px 0 var(--color-shadow-secondary);
             border-radius: 10px;
@@ -31,11 +31,7 @@ main {
             }
         }
 
-        /* .connect_grid-signin {
-            
-        } */
-
-        .connect_grid-signup {
+        .grid-signup {
             display: flex;
             flex-direction: column;
             background-color: var(--color-bg-dark-primary);
@@ -69,9 +65,11 @@ main {
     }
 }
 
-/* FORMULAIRE */
+/*************************************************/
+/* ACCOUNT : FORMULAIRE
+/*************************************************/
 
-.connect_form {
+.account_form {
     margin-top: 2rem;
     
     >div {

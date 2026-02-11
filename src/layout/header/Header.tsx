@@ -8,12 +8,12 @@ import Menu from '../menu/Menu.tsx'
 export default function Header(props: HeaderProps): ReactElement {
     return (
         <header>
-            <div className='header_bandeau_left'></div>
-            <div className='header_bandeau_center container'>
-                <a className='header_bandeau_logo' href='/'>
+            <div className='bandeau_left'></div>
+            <div className='bandeau_center container'>
+                <a className='bandeau_logo' href='/'>
                     <img src={imgLogo} alt='logo' />
-                    <div className='header_bandeau_logo-separator'></div>
-                    <div className='header_bandeau_logo-title'>
+                    <div className='bandeau_logo-separator'></div>
+                    <div className='bandeau_logo-title'>
                         <span>É</span>co<span>W</span>orking
                     </div>
                 </a>

@@ -1,4 +1,4 @@
-.presentation {
+.home-presentation {
     padding: 5rem 0;
 
     p {
@@ -18,30 +18,30 @@
 
     h3 {
         margin-top: 2rem;
-    }    
-}
+    }
 
-/* LIENS */
+    /* LIENS */
 
-.presentation_city {
-    display: block;
-    background-color: var(--color-bg-bandeau-primary);
-    box-shadow: 0 0 10px 5px var(--color-shadow-secondary);
-    border-radius: 50%;
-    overflow: hidden;
-
-    img{
+    .presentation_city {
         display: block;
-        width: 100%;
-        height: auto;
+        background-color: var(--color-bg-bandeau-primary);
+        box-shadow: 0 0 10px 5px var(--color-shadow-secondary);
         border-radius: 50%;
-        transition: all var(--transition-primary);
-    }   
-    
-    &:hover {
-        img {
-            opacity: 0.5;
-            transform: scale(1.1);
-        }
+        overflow: hidden;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            transition: all var(--transition-primary);
+        }   
+        
+        &:hover {
+            img {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+        }    
     }    
 }

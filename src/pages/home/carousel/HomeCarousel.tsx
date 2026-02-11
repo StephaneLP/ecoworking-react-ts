@@ -4,20 +4,20 @@ import { ReactElement } from 'react'
 export default function HomeCarousel(): ReactElement {
     return (
         <section className='home-carousel'>
-            <button className='home-carousel_btn home-carousel_btnPrev'>
+            <button className='carousel_btn carousel_btnPrev'>
                 <span>&lt;</span>
             </button>
-            <div className='home-carousel_center'>
-                <div className='home-carousel_infos'>
+            <div className='carousel_center'>
+                <div className='carousel_infos'>
                     <div>
-                        <p className='home-carousel_infos-title'></p>
-                        <p className='home-carousel_infos-subtitle'></p>                        
+                        <p className='carousel_infos-title'></p>
+                        <p className='carousel_infos-subtitle'></p>                        
                     </div>
                 </div>                
-                <div className='home-carousel_nav'>
+                <div className='carousel_nav'>
                 </div>
             </div>
-            <button className='home-carousel_btn home-carousel_btnNext'>
+            <button className='carousel_btn carousel_btnNext'>
                 <span>&gt;</span>
             </button>
         </section>

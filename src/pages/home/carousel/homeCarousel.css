@@ -9,93 +9,93 @@
     background-size: cover;
     transition: all 0.8s ease-out;
     background-color: blue;
-}
 
-/* CARROUSEL : BOUTONS DE NAVIGATION GAUCHE & DROIT */
+    /* CARROUSEL : BOUTONS DE NAVIGATION GAUCHE & DROIT */
 
-.home-carousel_btn {
-    display: flex;
-    align-items: center;
-    padding: 0 1.5rem;
-    backdrop-filter: brightness(100%) blur(0.25rem);
-    transition: backdrop-filter var(--transition-primary);
-
-    span {
-        font-family: "Poppins-thin", Verdana, sans-serif;
-        font-size: 6rem;
-        color: var(--color-font-light);
-        transition: color var(--transition-primary);            
-    }
-    
-    &:hover {
-        backdrop-filter: brightness(80%) blur(0);
+    .carousel_btn {
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+        backdrop-filter: brightness(100%) blur(0.25rem);
+        transition: backdrop-filter var(--transition-primary);
 
         span {
-            color: var(--color-hover-secondary);
+            font-family: "Poppins-thin", Verdana, sans-serif;
+            font-size: 6rem;
+            color: var(--color-font-light);
+            transition: color var(--transition-primary);            
         }
-    }
-
-    &:focus-visible {
-        span {
-            outline: 2px solid var(--color-hover-primary);
-        }
-    }
-}
-
-/* CARROUSEL : TITRES & BOUTONS DE NAVIGATION BAS */
-
-.home-carousel_center {
-    display: flex;
-    flex-direction: column;
-}
-
-.home-carousel_infos {
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-
-    >div {
-        margin-bottom: 2rem;
-        padding: 1rem 4rem;
-        backdrop-filter: blur(0.25rem);
-        border-radius: 10px;
-        color: var(--color-font-light);
-        text-align: center;
-
-        .home-carousel_infos-title {
-            font-family: var(--font-family-title);
-            font-size: 2.6rem;
-            }
-
-        .home-carousel_infos-subtitle {
-            font-size: 2rem;
-        }
-    }            
-}
-
-.home-carousel_nav {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-
-    .home-carousel_nav-slideLink {
-        width: 4rem;
-        height: 0.3rem;
-        background-color: var(--color-hover-arrows);
-        transition: background-color var(--transition-primary);
-
+        
         &:hover {
-            background-color: var(--color-hover-secondary);
+            backdrop-filter: brightness(80%) blur(0);
+
+            span {
+                color: var(--color-hover-secondary);
+            }
         }
 
         &:focus-visible {
-            background-color: var(--color-hover-secondary);
+            span {
+                outline: 2px solid var(--color-hover-primary);
+            }
         }
     }
 
-    .home-carousel_nav-active {
-        background-color: var(--color-font-light);
+    /* CARROUSEL : TITRES & BOUTONS DE NAVIGATION BAS */
+
+    .carousel_center {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel_infos {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+
+        >div {
+            margin-bottom: 2rem;
+            padding: 1rem 4rem;
+            backdrop-filter: blur(0.25rem);
+            border-radius: 10px;
+            color: var(--color-font-light);
+            text-align: center;
+
+            .home-carousel_infos-title {
+                font-family: var(--font-family-title);
+                font-size: 2.6rem;
+                }
+
+            .home-carousel_infos-subtitle {
+                font-size: 2rem;
+            }
+        }            
+    }
+
+    .carousel_nav {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        .carousel_nav-slideLink {
+            width: 4rem;
+            height: 0.3rem;
+            background-color: var(--color-hover-arrows);
+            transition: background-color var(--transition-primary);
+
+            &:hover {
+                background-color: var(--color-hover-secondary);
+            }
+
+            &:focus-visible {
+                background-color: var(--color-hover-secondary);
+            }
+        }
+
+        .carousel_nav-active {
+            background-color: var(--color-font-light);
+        }
     }
 }        

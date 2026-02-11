@@ -11,128 +11,128 @@
        color: var(--color-font-light);
     } */
 
-    .home-selection_grid {
+    .selection_grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: 1fr;
         gap: 3rem;
         margin-top: 5rem;
     }
-}
 
-/* FICHE ECOWORKING */
+    /* FICHE ECOWORKING */
 
-.home-selection_place {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-bg-dark-primary);
-    box-shadow: 0 0 10px 6px var(--color-shadow-secondary);
-
-    &:hover {
-        .home-selection_place-containt {
-            border-top: solid 1px var(--color-bg-separator);
-        }
-
-        .home-selection_place-overlay {
-            height: 100%;
-        }
-    }  
-}
-
-/* FICHE ECOWORKING : EN-TÊTE */
-
-.home-selection_place-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    font-size: 1.4rem;
-    color: var(--color-font-light);
-
-    .home-selection_place-name {
-        font-size: 1.7rem;
-        color: var(--color-font-light);
-    }
-
-    .home-selection_place-city {
-        color: var(--color-font-medium);
-    }
-}
-
-/* FICHE ECOWORKING : CORPS */
-
-.home-selection_place-containt {
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    border-top: solid 1px transparent;
-
-    img {
-        display: block;
-        width: 100%;
-        height: 15rem;
-        object-fit: cover;
-    }
-    
-    .home-selection_place-note {
+    .selection_place {
         display: flex;
-        justify-content: center;
-        gap: 0.4rem;
-        padding: 1rem;
-        border-bottom: solid 1px var(--color-bg-separator);
+        flex-direction: column;
+        background-color: var(--color-bg-dark-primary);
+        box-shadow: 0 0 10px 6px var(--color-shadow-secondary);
 
-        div {
-            font-family: var(--font-family-etoile);
-            color: var(--color-font-medium);
-            font-size: 1.5rem;
-
-            &::before {
-                content: "\002605";
+        &:hover {
+            .selection_place-containt {
+                border-top: solid 1px var(--color-bg-separator);
             }
+
+            .selection_place-overlay {
+                height: 100%;
+            }
+        }  
+    }
+
+    /* FICHE ECOWORKING : EN-TÊTE */
+
+    .selection_place-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        color: var(--color-font-light);
+
+        .selection_place-name {
+            font-size: 1.7rem;
+            color: var(--color-font-light);
         }
 
-        .note-active {
-            color: var(--color-bg-note);
+        .selection_place-city {
+            color: var(--color-font-medium);
         }
     }
-    
-    .home-selection_place-comment {
+
+    /* FICHE ECOWORKING : CORPS */
+
+    .selection_place-containt {
+        position: relative;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-        font-family: var(--font-family-title);
-        font-size: 1.2rem;
-        font-style: italic;
-        color: var(--color-font-light);
+        border-top: solid 1px transparent;
 
-        span:first-child, span:last-child {
-            font-size: 2rem;
+        img {
+            display: block;
+            width: 100%;
+            height: 15rem;
+            object-fit: cover;
         }
+        
+        .selection_place-note {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 1rem;
+            border-bottom: solid 1px var(--color-bg-separator);
 
-        span:last-child {
-            text-align: right;
+            div {
+                font-family: var(--font-family-etoile);
+                color: var(--color-font-medium);
+                font-size: 1.5rem;
+
+                &::before {
+                    content: "\002605";
+                }
+            }
+
+            .note-active {
+                color: var(--color-bg-note);
+            }
         }
+        
+        .selection_place-comment {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            font-family: var(--font-family-title);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--color-font-light);
 
-        .home-selection_place-comment-text {
-            text-align: center;
-        }
+            span:first-child, span:last-child {
+                font-size: 2rem;
+            }
 
-    }         
+            span:last-child {
+                text-align: right;
+            }
 
-    .home-selection_place-overlay {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        transition: all var(--transition-primary);
-        background-color: var(--color-bg-dark-secondary);
-    } 
+            .selection_place-comment-text {
+                text-align: center;
+            }
+
+        }         
+
+        .selection_place-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: all var(--transition-primary);
+            background-color: var(--color-bg-dark-secondary);
+        } 
+    }
 }
