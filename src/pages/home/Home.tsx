@@ -1,5 +1,9 @@
 import Header from '../../layout/header/Header.tsx'
 import Footer from '../../layout/footer/Footer.tsx'
+import HomeCarousel from './carousel/HomeCarousel.tsx'
+import HomePresentation from './presentation/HomePresentation.tsx'
+import HomeSelection from './selection/HomeSelection.tsx'
+
 import { HeaderProps } from '../../definitions/props.ts'
 import { ReactElement, useEffect } from "react"
 
@@ -15,7 +19,9 @@ export default function Home(): ReactElement {
         <>
         <Header {...props} />
         <main>
-HOME
+            <HomeCarousel />
+            <HomePresentation />
+            <HomeSelection />
         </main>
         <Footer />
         </>
