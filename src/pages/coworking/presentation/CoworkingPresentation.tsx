@@ -18,13 +18,13 @@ export default function CoworkingPresentation(): ReactElement {
                     <div className="etoile-active"></div>
                     <div className="etoile-active"></div>
                 </div>
-                <div className="avis-lien"><a href="#">(6 avis)</a></div>
+                <div className="avis-lien"><a href="#0">(6 avis)</a></div>
             </div>
 
             <div className="header-infos">
                 <div className="infos-coordonnees"> 
                     <img src={imgGlobe} alt="email" />
-                    <span className="coordonnees-site"><a href="#">Site Web</a></span>
+                    <span className="coordonnees-site"><a href="#0">Site Web</a></span>
                 </div>
                 <div className="infos-coordonnees"> 
                     <img src={imgAppel} alt="téléphone" />
@@ -44,7 +44,7 @@ export default function CoworkingPresentation(): ReactElement {
 
             {/* PRESENTATION */}
             <div className="header-presentation">
-                <div className="coworking-presentation-texte">
+                <div className="presentation-texte">
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                         Dolores odio assumenda autem inventore architecto similique. 

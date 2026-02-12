@@ -1,0 +1,72 @@
+.coworking_infos {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    
+    .infos-tarifs {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    .infos-pratiques {
+        flex-grow: 2;
+        flex-basis: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .infos-tarifs, .infos-pratiques >div {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            padding-right: 2rem;
+            font-weight: bold;
+        }
+
+        h4 {
+            border-bottom: solid 1px var(--color-div-border-primary);
+        }
+
+        h5 {
+            color: var(--color-font-title-primary-bis);
+            margin-bottom: 1rem;
+        }
+
+        >div {
+            margin-top: 2rem;
+        }
+        
+        .infos-horaires, .infos-prix {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 0.6rem;
+        }
+
+        .infos_localisation {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            .map {
+                flex-grow: 1;
+                border: solid 1px var(--color-div-border-primary);
+                background-image: url(../../../assets/img/ecoworking/map.png);
+                background-position: center;
+                background-size: cover;
+                background-clip: content-box;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 3.5rem;
+                }
+            }
+        }
+    }
+}
