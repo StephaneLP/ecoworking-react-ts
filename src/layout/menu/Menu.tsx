@@ -1,14 +1,41 @@
 import './menu.css'
 import { Link } from 'react-router-dom'
 import { HeaderProps } from '../../definitions/props.ts'
-import { ReactElement } from 'react'
+import { ReactElement, useState, useEffect } from 'react'
 
 export default function Menu(props: HeaderProps): ReactElement {
     const displayMenu = props.displayMenu
     const displayBackBtn = props.displayBackBtn
 
+    const [cities, setCities] = useState([])
+
+    useEffect(() => {
+        const fetchCities = async() => {
+            try {
+                const response = await fetch('http://localhost:3001/ville?col=rank&dir=asc&is_active=true', {method: "GET"})
+                if (!response.ok) {
+                    throw new Error('Network response was not okay')
+                }
+
+                const data = await response.json()
+                if (data.data && data.data[0].name) {
+                    setCities(data.data)
+                }
+                
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+
+        fetchCities()
+    }, [])
+
     return (
         <nav>
+            { cities.map(city => (
+                <span>{city.name} {city.id} / </span>
+            ))}
             <ul className="header_menu">
             { displayMenu && (
                 <>
