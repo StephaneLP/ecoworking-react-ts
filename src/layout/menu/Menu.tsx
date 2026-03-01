@@ -3,68 +3,66 @@ import { Link } from 'react-router-dom'
 import { HeaderProps } from '../../definitions/props.ts'
 import { ReactElement, useState, useEffect } from 'react'
 
+type City = Array<{
+    id: number,
+    name: string,
+    ecoworking: Array<{
+        id: number,
+        name: string
+    }>
+}>
+
 export default function Menu(props: HeaderProps): ReactElement {
     const displayMenu = props.displayMenu
     const displayBackBtn = props.displayBackBtn
 
-    const [cities, setCities] = useState([])
+    const [cities, setCities] = useState<City>([])
 
     useEffect(() => {
-        const fetchCities = async() => {
+        async function fetchCities(): Promise<void> {
+            const url = 'http://localhost:3001/ville?col=rank&dir=asc'
+
             try {
-                const response = await fetch('http://localhost:3001/ville?col=rank&dir=asc&is_active=true', {method: "GET"})
+                const response = await fetch(url, {method: "GET"})
                 if (!response.ok) {
-                    throw new Error('Network response was not okay')
+                    throw new Error(`Statut de réponse : ${response.status}`)
                 }
 
-                const data = await response.json()
-                if (data.data && data.data[0].name) {
-                    setCities(data.data)
-                }
-                
+                const result = await response.json()
+                const data: City = result.data
+
+                setCities(data)
             }
             catch (err) {
                 console.log(err)
             }
         }
 
-        fetchCities()
-    }, [])
+        if (displayMenu) fetchCities()
+    }, [displayMenu])
 
     return (
         <nav>
-            { cities.map(city => (
-                <span>{city.name} {city.id} / </span>
-            ))}
             <ul className="header_menu">
+
             { displayMenu && (
                 <>
                 <li>
                     <span className="menu-libelle">Espaces d'écoworking</span>
                     <div className="menu-dropdown">
                         <div className="container">
+                        { cities.map(city => (
                             <div>
-                                <span>Laval</span>
-                                <ul className="submenu">
-                                    <li><Link to="/coworking">Green Place</Link></li>
-                                    <li><Link to="/coworking">Assolidaire</Link></li>
-                                    <li><Link to="/coworking">Le Comptoir du Maine</Link></li>
+                                <span>{city.name}</span>
+                                <ul key={city.id} className="submenu">
+                                    { city.ecoworking.map(place => (
+                                        <>
+                                        <li key={place.id}><Link to="/coworking">{place.name}</Link></li>
+                                        </>
+                                    ))}
                                 </ul>                                     
                             </div>
-                            <div>
-                                <span>Château-Gontier</span>
-                                <ul className="submenu">
-                                    <li><Link to="/coworking">eCafé</Link></li>
-                                    <li><Link to="/coworking">La Harelle</Link></li>
-                                </ul>                                     
-                            </div>
-                            <div>
-                                <span>Mayenne</span>
-                                <ul className="submenu">
-                                    <li><Link to="/coworking">La Bulle Verte</Link></li>
-                                    <li><Link to="/coworking">La Mayennaise</Link></li>
-                                </ul>                                     
-                            </div>
+                        ))}
                         </div>
                     </div>
                 </li>
@@ -81,6 +79,7 @@ export default function Menu(props: HeaderProps): ReactElement {
                     </Link>
                 </li>
             )}
+
             </ul>
         </nav>  
     )
